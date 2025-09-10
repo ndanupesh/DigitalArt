@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white; /* Set text color to white */
+}
+
+body { 
+    margin: 0;
+    font-family: Garamond, serif;
+}
+  
+.header {
+    overflow: hidden;
+    padding: 20px 10px;
+}
+  
+.header a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    color: white; /* Ensure links also have white text */
+}
+  
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+  
+.header-right {
+    float: right;
+}
+  
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .header-right {
+        float: none;
+    }
+}
+
+
+/* Header section with slideshow */
+.header-section {
+    background-image: url(Pictures/painter1.jpg); /* Test with a single image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    }
+
+    .header-section {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+    }
+    
+    .header-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        animation: slideshow 20s infinite;
+        z-index: -1;
+    }
+    @keyframes slideshow {
+        0% { background-image: url("Pictures/cam2.jpg"); }
+        25% { background-image: url("Pictures/h4.jpg"); }
+        50% { background-image: url("Pictures/h5.jpg"); }
+        75% { background-image: url("Pictures/h6.jpg"); }
+       
+    }
+    
+    .slideshow {
+        position: relative; /* Needed for positioning header content */
+        animation: slideshow 20s infinite; /* Match the timing for consistency */
+        width: 100%; /* Set width and height as necessary */
+        height: 100%;
+        filter: brightness(100%); /* Adjust to fade the background images */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slide {
+        min-width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0; /* Start hidden */
+        animation: slideAnimation 20s infinite; /* Match the timing */
+    }
+    
+    /* Animation to fade in/out each slide */
+    @keyframes slideAnimation {
+        0%, 25% { opacity: 0; }
+        30%, 100% { opacity: 0; }
+    }
+    
+    .slide:nth-child(1) { animation-delay: 0s; }
+    .slide:nth-child(2) { animation-delay: 5s; }
+    .slide:nth-child(3) { animation-delay: 10s; }
+    .slide:nth-child(4) { animation-delay: 15s; }
+    
+/* Header content styling */
+.header-content {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 20px;
+}
+/* Optional Text Styling */
+.header-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.header-content p {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+
+.header-content button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: grey;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.header-content button:hover {
+    background-color: #444;
+}
+
+
+/* Styling for Services Section */
+.services {
+    padding: 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    flex: 1 1 calc(25% - 20px); /* 4 items per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px; /* Set height for uniform size */
+    object-fit: cover; /* Ensures image fills the container without distortion */
+}
+
+.service-item p {
+    padding: 10px;
+    font-size: 1rem;
+}
+.row-description {
+    font-size: 1.2rem;
+    margin: 30px 0; /* Space above and below the row description */
+    margin-bottom: 20px; /* Increase this to add more space below */
+    font-weight: bold;
+}
+
+/*Team Member section*/
+.team {
+    padding: 40px;
+    text-align: center;
+}
+
+.about-container {
+    text-align: center;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  .team-member {
+    flex: 0 0 200px;
+    text-align: center;
+    margin: 20px;
+    
+  }
+  
+  .team-member img {
+    width: 300px;
+    height: 300px;
+    border-radius: 180%; /* Circular shape for the images */
+    border: 2px solid #333333; /* Dark gray */
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 14px;
+  }
+  
+  .team-member:hover img {
+    transform: scale(1.1); /* Image zoom effect on hover */
+  }
+
+
+  /* CSS for the Pricing Section*/
+#tribute-info{
+    font-family: Garamond, serif;
+    display: flex;
+    text-align: center;
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+#tribute-info-section1{
+    flex: 50%
+}
+ul{
+    display: inline-block;
+    text-align: left;
+}
+li{
+    padding-bottom: 15px;
+}
+/*CSS For the Row Section-Column2*/
+
+
+#tribute-info-section2{
+    flex: 50%;
+    padding: 1rem;
+}
+
+#tablesection{
+    border: 2px solid #f8f8fd;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+#tablesection h2{
+text-align: center;
+background-color: #6d1610;
+margin-top: 0;
+padding: 1rem 0;
+border-bottom: 1px solid #350802;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+
+tr.tableheader th{
+    text-align: left;
+    padding: 1rem 0 1rem 1rem;
+}
+caption{
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid #f9f9fa;
+    font-weight:bold;
+
+}
+tr.tablebody td:first-of-type{
+    vertical-align: top;
+}
+td{
+    vertical-align: top;
+    padding: 1rem;
+}
+.rowcolor{
+    background-color: #501b02;
+}
+.rowcolor:hover{
+    background-color: #f5b2ce;
+}
+.rowcolor2:hover{
+    background-color: #f06c6c;
+}
+.tabledescription{
+    text-align: justify;
+}
+
+
+  
+  .btn {
+    font-family: Garamond, serif;
+    padding: 4px;
+    font-size: 18px;
+    border: none;
+    background-color: #fdfdfd;
+    color: #030303;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  
+  .btn :hover  {
+    background-color: #d3c2c7;
+  }
+  /* Modal container (hidden by default) */
+.modal {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Close button styles */
+  .close {
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+
+  .modal-content h2 {
+    background-color: white;
+    color: #050505;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    background-color: white;
+    color: #050505;
+    margin: 10px 0;
+  }
+  
+  .modal-content form {
+    background-color: white;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content input {
+    background-color: white;
+    color: #000;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #e60023;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #bf001c;
+  }
+  
+  .btn-secondary {
+    padding: 10px;
+    background-color: #4267b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #365899;
+  }
+  
+  .modal-content a {
+    background-color: white;
+    color: #e60023;
+    text-decoration: none;
+  }
+  
+  .modal-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Close Button */
+  .close {
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+
+
+  #section3{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(14, 14, 13);
+    padding: 3rem 0;
+    color:#000;
+    width: 100%
+} 
+
+  footer{
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+  
