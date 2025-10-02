@@ -132,12 +132,12 @@
         <div class="team-member">
           <img src="Pictures/painter1.jpg" alt="Painter 1">
           <h3>Paul Harrisson</h3>
-          <p>Certified Personal Trainer</p>
+          <p>Painter</p>
         </div>
         <div class="team-member">
           <img src="Pictures/painter3.jpg" alt="  Painter 2">
           <h3>Wendy Smith</h3>
-          <p>Group Fitness Instructor</p>
+          <p>Painter</p>
         </div>
         <div class="team-member">
           <img src="Pictures/painter2.jpg" alt="Digital Artist">
@@ -154,7 +154,7 @@
       <div class="team-member">
          <img src="Pictures/painter5.jpg" alt="Digital Artist">
          <h3>Mike Johnson</h3>
-         <p>Digital Artist</p>
+         <p>Painter</p>
     </div>
     
 </section>
@@ -214,13 +214,7 @@
                       <td class="tabledescription">Decorative artwork designed to enhance living or working spaces with captivating visuals.</td>
                       <td>Ksh 10,000- Ksh 500,000</td>
                       
-                    </tr>
-                   <tr class="rowcolor">
-                          <td>Curated Wall Art</td>
-                          <td class="tabledescription">Carefully selected and themed pieces of artwork tailored to specific styles or interiors.</td>
-                          <td>Ksh 50,000 - Ksh 500,000</td>
-                          
-                    </tr>
+                  </tr>
               </tbody>
           </table>
       </section>
@@ -267,64 +261,58 @@
   </div>
 </div>
 
-<section class="contact-container" id ="contact">
-  <h2>CONTACT US</h2>
+  <section class="contact-container" id="contact">
+    <h2 class="contact-title">CONTACT US</h2>
     <div id="container">
-    <!-- Left Section for Information and Image -->
-    <div id="left-section">
-        <h2>Subscribe for Daily Updates</h2>
-        <img src="cam1.jpg" alt="Placeholder Image">
+        <!-- Left Section for Information and Image -->
+        <div id="left-section">
+            <h3>Subscribe for Daily Updates</h3>
+            <img src="Pictures/contact.jpg" alt="Placeholder Image">
+            <form class="subscribe-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+    </form>
+          </div>
+        <!-- Right Section for Create Account Form -->
+        <div id="right-section">
+            <div class="contact-form">
+                <h3>Send Us a Message!</h3>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Your Inquiry" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <h4>Get In Touch</h4>
+                <p>
+                    If you have any questions, feedback, or need assistance, please
+                    reach out to us using the form or through our contact details below.
+                </p>
+                <p><strong>Address:</strong> Nairobi, Thika Road Exit; USIU-Africa</p>
+                <p><strong>Phone:</strong> +254 742 672 568</p>
+                <p><strong>Email:</strong> <a href="mailto:info@artsyrealm.com">info@artsyrealm.com</a></p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-
-
-    <!-- Right Section for Create Account Form -->
-    <div id="right-section">
-      <div class="contact-form">
-        <h2>Send Us a Message!</h2>
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your Name" required>
-    
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Your Email" required>
-    
-          <label for="message">Message</label>
-          <textarea id="message" rows="4" placeholder="Your Inquiry" required></textarea>
-    
-          <button type="submit">Send Message</button>
-        </form>
-
-        <h3>Get In Touch</h3>
-        <p>
-          If you have any questions, feedback, or need assistance, please
-          reach out to us using the form or through our contact details below.
-        </p>
-        <p><strong>Address:</strong> Nairobi, Thika Road Exit;USIU-Africa</p>
-        <p><strong>Phone:</strong> +254 742 672 568</p>
-        <p><strong>Email:</strong> <a href="artsyrealm.com">info@artsyrealm.com</a></p>
-        <div class="social-media">
-          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
     </div>
-
-    </div>
-  
-
-
-
-
-  
 </section>
 
 <div id="section3">
   <div id="testimonialContainer">
-      <h3>TESTIMONIALS</h3>
-      <button id="generateButton">Generate Testimonials</button>
+    <h2>TESTIMONIALS</h2>
+    <div class="testimonials-controls">
+      <button id="generateButton">Generate</button>
       <input type="range" id="slider" min="1" max="5" value="1">
-      <div id="testimonialsContainer"></div>
+      <span id="testimonialsCount">1</span>
+    </div>
+    <div id="testimonialsContainer"></div>
   </div>
 </div>
 
