@@ -51,119 +51,6 @@ body {
 }
 
 
-/* Header section with slideshow */
-.header-section {
-    background-image: url(Pictures/painter1.jpg); /* Test with a single image */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    }
-
-    .header-section {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #fff;
-        overflow: hidden;
-    }
-    
-    .header-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        animation: slideshow 20s infinite;
-        z-index: -1;
-    }
-    @keyframes slideshow {
-        0% { background-image: url("Pictures/cam2.jpg"); }
-        25% { background-image: url("Pictures/ar6.jpg"); }
-        50% { background-image: url("Pictures/ar3.jpg"); }
-        75% { background-image: url("Pictures/h6.jpg"); }
-       
-    }
-    
-    .slideshow {
-        position: relative; /* Needed for positioning header content */
-        animation: slideshow 20s infinite; /* Match the timing for consistency */
-        width: 100%; /* Set width and height as necessary */
-        height: 100%;
-        filter: brightness(100%); /* Adjust to fade the background images */
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .slide {
-        min-width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        opacity: 0; /* Start hidden */
-        animation: slideAnimation 20s infinite; /* Match the timing */
-    }
-    
-    /* Animation to fade in/out each slide */
-    @keyframes slideAnimation {
-        0%, 25% { opacity: 0; }
-        30%, 100% { opacity: 0; }
-    }
-    
-    .slide:nth-child(1) { animation-delay: 0s; }
-    .slide:nth-child(2) { animation-delay: 5s; }
-    .slide:nth-child(3) { animation-delay: 10s; }
-    .slide:nth-child(4) { animation-delay: 15s; }
-    
-/* Header content styling */
-.header-content {
-    position: absolute;
-    text-align: center;
-    color: #fff;
-    z-index: 1;
-    padding: 20px;
-}
-/* Optional Text Styling */
-.header-content h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-.header-content p {
-    font-size: 1.2rem;
-    padding-bottom: 20px;
-    padding-top: 30px;
-}
-
-
-.header-content button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border: none;
-    background-color: grey;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.header-content button:hover {
-    background-color: #444;
-}
-
-
 /* Styling for Services Section */
 .services {
     padding: 20px;
@@ -724,7 +611,7 @@ button,
     color-scheme: dark;
     --ink: #f4f0e8;
     --muted: #aaa69d;
-    --paper: #0c0d0c;
+    --paper: #000000;
     --paper-light: #171816;
     --line: #353630;
     --accent: #e88768;
@@ -733,7 +620,7 @@ button,
     --field-text: #24231f;
     --serif: "Bodoni Moda", "Times New Roman", serif;
     --sans: "DM Sans", "Segoe UI", Arial, sans-serif;
-    --label: "Space Mono", Consolas, monospace;
+    --label: var(--sans);
 }
 
 *, *::before, *::after {
@@ -905,9 +792,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .slide:nth-child(1) { background-image: url("Pictures/cam2.jpg"); animation-delay: 0s; }
-.slide:nth-child(2) { background-image: url("Pictures/h4.jpg"); animation-delay: -5s; }
-.slide:nth-child(3) { background-image: url("Pictures/h5.jpg"); animation-delay: -10s; }
-.slide:nth-child(4) { background-image: url("Pictures/h6.jpg"); animation-delay: -15s; }
+.slide:nth-child(2) { background-image: url("Pictures/ar6.jpg"); animation-delay: -5s; }
+.slide:nth-child(3) { background-image: url("Pictures/ar3.jpg"); animation-delay: -10s; }
+.slide:nth-child(4) { background-image: url("Pictures/ar9.jpg"); animation-delay: -15s; }
 
 @keyframes hero-fade {
     0%, 5% { opacity: 0; }
@@ -1052,10 +939,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .service-item:hover img {
     transform: scale(1.045);
-}
-
-.services-grid-wide .service-item:nth-child(3n + 1) {
-    aspect-ratio: 1 / 1.05;
 }
 
 .team {
@@ -1937,8 +1820,9 @@ body {
 
 .eyebrow, .pricing-number, .price-currency {
     font-family: var(--label);
-    font-size: .67rem;
-    letter-spacing: .11em;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .13em;
 }
 
 .eyebrow {
@@ -1951,11 +1835,11 @@ body {
 }
 
 .gallery {
-    background: #141311;
+    background: #000000;
 }
 
 .team, .testimonials {
-    background: #191715;
+    background: #000000;
 }
 
 .pricing {
@@ -1963,7 +1847,7 @@ body {
 }
 
 .contact {
-    background: #11100f;
+    background: #000000;
 }
 
 .category-heading h3, .team-member h3, .pricing-card-heading h3,
@@ -2081,7 +1965,7 @@ body {
 }
 
 .site-footer {
-    background: #100f0e;
+    background: #000000;
     border-top: 1px solid #302d2a;
 }
 
