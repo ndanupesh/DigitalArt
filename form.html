@@ -3,12 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login and Signup</title>
+  <meta name="description" content="A frontend-only sign up and login interface demo for Artsy Realm.">
+  <title>Account UI Demo — Artsy Realm</title>
+  <script>
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('artsy-realm-theme') === 'light' ? 'light' : 'dark';
+    } catch {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
- 
-
-  <script src="script.js"></script>
+<body class="auth-page">
+  <header class="auth-page-header">
+    <a class="brand" href="index.html"><span class="brand-mark">AR</span><span>Artsy Realm</span></a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light</span></button>
+    <a class="text-link" href="index.html">Back to the gallery <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="auth-showcase">
+    <div class="auth-showcase-heading">
+      <p class="eyebrow">Interface study · Frontend demo</p>
+      <h1>Good art deserves<br><em>a good welcome.</em></h1>
+      <p>Sign up and login form concepts for the Artsy Realm gallery. These forms demonstrate the interface only; no account is created and no information is sent or stored.</p>
+    </div>
+    <div class="auth-demo-layout">
+      <section class="auth-demo-card" aria-labelledby="demo-signup-title">
+        <p class="eyebrow">New around here?</p>
+        <h2 id="demo-signup-title">Create a profile</h2>
+        <p class="auth-card-copy">Save your favourite pieces and keep up with new work.</p>
+        <form class="auth-form demo-form">
+          <label for="demo-signup-email">Email address</label>
+          <input id="demo-signup-email" name="email" type="email" autocomplete="email" required>
+          <label for="demo-signup-password">Create a password</label>
+          <input id="demo-signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+          <label for="demo-signup-birthday">Birthday</label>
+          <input id="demo-signup-birthday" name="birthday" type="date" required>
+          <button class="button button-accent" type="submit">Sign up</button>
+          <p class="form-feedback" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="auth-demo-card auth-demo-card-login" aria-labelledby="demo-login-title">
+        <p class="eyebrow">Already a member?</p>
+        <h2 id="demo-login-title">Welcome back</h2>
+        <p class="auth-card-copy">Log in to revisit the pieces you’ve saved.</p>
+        <form class="auth-form demo-form">
+          <label for="demo-login-email">Email address</label>
+          <input id="demo-login-email" name="email" type="email" autocomplete="email" required>
+          <label for="demo-login-password">Password</label>
+          <input id="demo-login-password" name="password" type="password" autocomplete="current-password" required>
+          <button class="button button-light" type="submit">Log in</button>
+          <p class="form-feedback" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
 </body>
 </html>
