@@ -89,8 +89,8 @@ body {
     }
     @keyframes slideshow {
         0% { background-image: url("Pictures/cam2.jpg"); }
-        25% { background-image: url("Pictures/h4.jpg"); }
-        50% { background-image: url("Pictures/h5.jpg"); }
+        25% { background-image: url("Pictures/ar6.jpg"); }
+        50% { background-image: url("Pictures/ar3.jpg"); }
         75% { background-image: url("Pictures/h6.jpg"); }
        
     }
@@ -729,7 +729,7 @@ button,
     --line: #353630;
     --accent: #e88768;
     --accent-dark: #c9674b;
-    --plum: #2b202c;
+    --plum: #2b2927;
     --field-text: #24231f;
     --serif: "Bodoni Moda", "Times New Roman", serif;
     --sans: "DM Sans", "Segoe UI", Arial, sans-serif;
@@ -857,7 +857,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .button-light:hover {
-    background: #39283b;
+    background: #39332f;
 }
 
 .button-quiet {
@@ -894,7 +894,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-slideshow::after {
     content: "";
-    background: linear-gradient(90deg, rgba(25, 18, 29, .83), rgba(25, 18, 29, .35) 58%, rgba(25, 18, 29, .12)), linear-gradient(0deg, rgba(25, 18, 29, .22), transparent 40%);
+    background: linear-gradient(90deg, rgba(22, 20, 18, .83), rgba(22, 20, 18, .35) 58%, rgba(22, 20, 18, .12)), linear-gradient(0deg, rgba(22, 20, 18, .22), transparent 40%);
 }
 
 .slide {
@@ -1374,7 +1374,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .subscribe-controls .button-light:hover {
-    background: #39283b;
+    background: #39332f;
 }
 
 .contact-form .button-accent {
@@ -1881,7 +1881,7 @@ body {
 }
 
 .site-header, .auth-page-header {
-    background: #121015;
+    background: #121110;
     border-color: var(--line);
 }
 
@@ -1951,11 +1951,11 @@ body {
 }
 
 .gallery {
-    background: #141116;
+    background: #141311;
 }
 
 .team, .testimonials {
-    background: #19151c;
+    background: #191715;
 }
 
 .pricing {
@@ -1963,7 +1963,7 @@ body {
 }
 
 .contact {
-    background: #111014;
+    background: #11100f;
 }
 
 .category-heading h3, .team-member h3, .pricing-card-heading h3,
@@ -1982,7 +1982,7 @@ body {
 }
 
 .service-item {
-    background: #24202a;
+    background: #24211f;
 }
 
 .team-member img {
@@ -1994,7 +1994,7 @@ body {
 }
 
 .pricing-card, .auth-demo-card {
-    background: #19161d;
+    background: #191715;
     color: var(--ink);
     border: 1px solid #33352f;
     box-shadow: 0 18px 55px rgba(0, 0, 0, .28);
@@ -2005,7 +2005,7 @@ body {
 }
 
 .pricing thead {
-    background: #26212a;
+    background: #262320;
     color: #d6d1c6;
 }
 
@@ -2039,8 +2039,8 @@ body {
 
 .contact-form input, .contact-form textarea, .subscribe-form input,
 .auth-form input {
-    border-color: #45404b;
-    background: #211d25;
+    border-color: #45413d;
+    background: #211f1d;
     color: var(--ink);
 }
 
@@ -2075,14 +2075,14 @@ body {
 }
 
 .testimonial-item {
-    border-color: #39333f;
-    background: #211d25;
+    border-color: #393531;
+    background: #211f1d;
     color: #eee8dd;
 }
 
 .site-footer {
-    background: #100d12;
-    border-top: 1px solid #302934;
+    background: #100f0e;
+    border-top: 1px solid #302d2a;
 }
 
 .site-footer > p {
@@ -2094,8 +2094,8 @@ body {
 }
 
 .modal-content {
-    border: 1px solid #45404b;
-    background: #19161d;
+    border: 1px solid #45413d;
+    background: #191715;
     color: var(--ink);
 }
 
@@ -2132,7 +2132,7 @@ body {
 }
 
 .auth-page {
-    background: #0c0b0f;
+    background: #0c0b0a;
 }
 
 .auth-demo-card-login {
@@ -2160,9 +2160,9 @@ body {
     justify-content: center;
     gap: 7px;
     padding: 7px 11px;
-    border: 1px solid #49434c;
+    border: 1px solid #494440;
     border-radius: 999px;
-    background: #1c171f;
+    background: #1c1917;
     color: #eee8dd;
     cursor: pointer;
     font-family: var(--sans);
@@ -2173,7 +2173,7 @@ body {
 
 .theme-toggle:hover {
     border-color: var(--accent);
-    background: #27212a;
+    background: #272320;
 }
 
 .theme-icon {
@@ -2220,13 +2220,13 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
 
 :root[data-theme="light"] .button-light,
 :root[data-theme="light"] .subscribe-controls .button-light {
-    background: #403144;
+    background: #403a35;
     color: #fffaf0;
 }
 
 :root[data-theme="light"] .button-light:hover,
 :root[data-theme="light"] .subscribe-controls .button-light:hover {
-    background: #332638;
+    background: #332e2a;
 }
 
 :root[data-theme="light"] .theme-toggle {
@@ -2237,7 +2237,7 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
 
 :root[data-theme="light"] .theme-toggle:hover {
     border-color: #b34f36;
-    background: #eee6ef;
+    background: #eee6dc;
 }
 
 :root[data-theme="light"] .theme-icon {
@@ -2246,18 +2246,18 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
 
 :root[data-theme="light"] .gallery,
 :root[data-theme="light"] .contact {
-    background: #fbf8fc;
+    background: #fbf9f5;
     color: #25251f;
 }
 
 :root[data-theme="light"] .team,
 :root[data-theme="light"] .testimonials {
-    background: #f0eaf1;
+    background: #eee8df;
     color: #25251f;
 }
 
 :root[data-theme="light"] .pricing {
-    background: #403144;
+    background: #403a35;
     color: #fffaf0;
 }
 
@@ -2266,7 +2266,7 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
 }
 
 :root[data-theme="light"] .service-item {
-    background: #e8e1ea;
+    background: #e8e1d8;
 }
 
 :root[data-theme="light"] .team-member img {
@@ -2318,6 +2318,10 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
     color: #f0b295;
 }
 
+:root[data-theme="light"] .contact-form h3 {
+    color: #25251f;
+}
+
 :root[data-theme="light"] .contact-form label,
 :root[data-theme="light"] .auth-form label {
     color: #555148;
@@ -2359,8 +2363,8 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
 }
 
 :root[data-theme="light"] .testimonial-item {
-    border-color: #ddd4df;
-    background: #fbf8fc;
+    border-color: #ded8cd;
+    background: #fbf9f5;
     color: #46443d;
 }
 
@@ -2392,8 +2396,8 @@ body, .site-header, .auth-page-header, .gallery, .team, .pricing,
 }
 
 :root[data-theme="light"] .auth-demo-card-login {
-    border-color: #403144;
-    background: #403144;
+    border-color: #403a35;
+    background: #403a35;
     color: #fffaf0;
 }
 
